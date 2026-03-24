@@ -57,8 +57,9 @@ stg 터널 pane을 띄웠습니다. 비밀번호를 입력해주세요.
 사용자가 비밀번호 입력 완료를 알리면, 포트를 확인하고 dev 서버를 띄운다.
 
 ```bash
-# 터널 연결 확인
-nc -z localhost 23306 && echo "터널 OK" || echo "터널 실패"
+# 터널 연결 확인 — stg alias 또는 사용자 입력에서 포트 번호를 파싱한다
+# 예: "ssh ... -L 23306:..." → 포트 23306
+nc -z localhost {파싱된 포트} && echo "터널 OK" || echo "터널 실패"
 
 # dev 서버
 tmux split-window -v 'cd ~/Documents/taling-core-api && git pull origin main && npm run dev; echo "dev 서버 종료"; read'
