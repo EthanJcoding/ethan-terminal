@@ -39,6 +39,8 @@ echo ""
 bash "$SCRIPT_DIR/tmux/install.sh"
 echo ""
 bash "$SCRIPT_DIR/csn/install.sh"
+echo ""
+bash "$SCRIPT_DIR/skills/install.sh"
 
 echo ""
 echo "============================================"
