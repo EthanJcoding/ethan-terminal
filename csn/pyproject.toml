@@ -1,0 +1,16 @@
+[project]
+name = "claude-session-navigator"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "textual>=1.0.0",
+    "thefuzz>=0.22.0",
+]
+
+[project.scripts]
+csn = "src.app:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]
